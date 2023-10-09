@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume Generator</title>
+</head>
+<body>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <!-- nav bar 2 -->
+            
+              <!-- Navbar content -->
+            
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Get'IT'</a>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="resume.html">Build</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="about.html">About</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+              
+              
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+<div class="  main">
+    <div class="background" id="">
+        <h1 class="text-center background">Resume Generator</h1>
+        <p class="text-center background">Build your future</p>
+    </div>
+        <hr/>
+
+    <div class="container color"  id="resumeform">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <!-- first col -->
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <div class=""shadow p-0 mb-bg-white rounded">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                </div>  
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input id="email" type="email" class="form-control"  placeholder="Email">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="phone">Your phone</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Phone">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="address">Your address</label>
+                    <textarea class="form-control" id="address" placeholder="Enter address" rows="5"></textarea>
+                </div>
+                <!-- photo  -->
+                <div class="form-group">
+                    <label for=""> Select your photo </label>
+                    <div class="shadow p-0 mb-0 bg-white rounded">
+                    <input type="file" id= "imgField" class="form-control">
+                    </div>
+                </div>
+
+                <p class="text-secondary my-3">Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="linkedin">Your LinkedIn</label>
+                    <input type="text" class="form-control" id="linkedin" placeholder="LinkedIn">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="github">Your GitHub</label>
+                    <input type="text" class="form-control" id="github" placeholder="GitHub">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instagram">Your Instagram</label>
+                    <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="facebook">Your Facebook</label>
+                    <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+                </div>
+            </div>
+
+    
+        
+        
+         <div class="col-md-6 mt-5">
+                <!-- second col -->
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="objective">Objective</label>
+                    <textarea class="form-control" id="objective" placeholder="Enter objectives" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="workexperience">Work experience</label>
+                    <textarea class="form-control workexperience" placeholder="Enter work experience" rows="3"></textarea>
+                    <!-- new textarea -->
+                    <div class="container text-center mt-2" id="weddbutton">
+                        <button onclick="addNewField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <!-- education -->
+                <div class="form-group mt-2" id="ed">
+                    <label for="education">Education</label>
+                    <textarea class="form-control education" placeholder="Enter education" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="aqAddbutton">
+                        <button onclick="addNewEducationField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <div class="container text-center mt-3">
+            <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate resume</button>
+    </div>
+    
+
+    
+
+    <!-- Resume Template -->
+    <div class="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- first col -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="img-fluid myimg" id="imgT"/>
+                <div class="container">
+                    <p id="namet1">harshith k</p>
+                    <p id="emailt">kharshith53@gmail.com</p>
+                    <p id="contactt">+917349599, +919980029171</p>
+                    <p id="addressT">#430, kammanahalli main road rs palya, bangalore -560033 india</p>
+                    <hr/>
+                    <p><a id="linkt" href="#1">https://LinkedIn.com</a></p>
+                    <p><a id="gitt" href="#1">https://GitHub.com</a></p>
+                    <p><a id="twittert" href="#1">https://twitter.com</a></p>
+                    <p><a id="instat" href="#1">https://Instagram.com</a></p>
+                    <p><a id="facebookt" href="#1">https://Facebook.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-4"> 
+                <!-- second col -->
+                <h1 id="namet2" class="text-center" style="font-weight: 980px;">Your Name</h1>
+                <!-- Objective card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <p id="objectivet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem iusto error, ratione reprehenderit placeat delectus maiores vel commodi recusandae sunt, accusantium cupiditate quasi aperiam nemo aliquam minus, quod tempora?</p>
+                </div>
+                <!-- Work Experience -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Education -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="edT">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+       
+    </div>
+    <div class="container mt-3 text-center">
+      <button onclick="printResume('resume-template')" class="btn btn-primary">Print Resume</button>
+  </div>  
+</div>
+
+<!-- Footer -->
+     <!-- Footer -->
+     <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up to get  mail</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example21" class="form-control" />
+                  <label class="form-label" for="form5Example21">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+    
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            A CV builder simplifies the task of creating a well-structured, visually appealing, and professional Curriculum Vitae. It's a valuable tool for job seekers, students, and professionals looking to present their qualifications and experiences in the best possible light.
+          </p>
+  
+        </section>
+        <!-- Section: Text -->
+    
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://www.linkedin.com/in/harshith-k-7513b3237/" class="text-white">Linkedin</a>
+                </li>
+                
+                <!-- <li>
+                  <a href="#! class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://github.com/harshith53" class="text-white">Github</a>
+                </li>
+                <!-- <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://instagram.com/" class="text-white">Instagram</a>
+                </li>
+                <!-- <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://www.facebook.com/" class="text-white">Facebook</a>
+                </li>
+                <!-- <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://github.com/harshith53">HARSHITH</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

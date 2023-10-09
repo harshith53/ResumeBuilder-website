@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrected the href attribute by removing the extra double quotes -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Corrected the attribute name from rel=""stylesheet" to rel="stylesheet" -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Resume Generator</title>
+</head>
+<body>
+    <div class="container" id="resume">
+    <h1 class="text-center">Resume Generator</h1>
+    <p class="text-center">Build your future</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- first col -->
+            <h3>Personal Information</h3>
+
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Your phone</label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone">
+            </div>
+            <div class="form-group mt-2">
+                <label for="address">Your address</label>
+                <textarea class="form-control" id="address" placeholder="Enter address" rows="5"></textarea>
+            </div>
+            <p class="text-secondary">Important Links</p>
+            <div class="form-group mt-2">
+                <label for="linkedin">Your LinkedIn</label>
+                <input type="text" class="form-control" id="linkedin" placeholder="LinkedIn">
+            </div>
+            <div class="form-group mt-2">
+                <label for="github">Your GitHub</label>
+                <input type="text" class="form-control" id="github" placeholder="GitHub">
+            </div>
+            <div class="form-group mt-2">
+                <label for="instagram">Your Instagram</label>
+                <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+            </div>
+            <div class="form-group mt-2">
+                <label for="facebook">Your Facebook</label>
+                <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- second col -->
+            <h3>Professional Information</h3>
+            <div class="form-group mt-2">
+                <label for="objective">Objective</label>
+                <textarea class="form-control" id="objective" placeholder="Enter objectives" rows="5"></textarea>
+            </div>
+            <div class="form-group mt-2" id ="we">
+                <label for ="workexperience" >work experience</label>
+                <textarea class="form-control" id="workexperience" placeholder="Enter workexperience" rows="3"></textarea>
+                
+            <!-- new textarea -->
+            <div class="container text-center mt-2" id="weddbutton">
+                <button onclick="addNewField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+                
+            </div>
+            <div class="form-group mt-2" id="ed">
+                <label for="education">Education</label>
+                <textarea class="form-control" id="education" placeholder="Enter education" rows="3"></textarea>
+
+                <div class =" container text-center mt-2" id= "aqAddbutton" >
+                    <button  onclick="addNeweductionfield()" class ="btn btn-primary btn-sm">Add</button>
+    
+                </div>
+            
+            </div>
+    
+           
+        </div>
+            
+        </div>
+    
+    <div class="container text-center mt-3 " >
+        <button class="btn btn-primary btn-lg">Generate resume</button>
+    </div>
+</div>
+</div>
+
+
+     <div class ="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- first col -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="img-fluid myimg"/>
+                <div class="container">
+                    <p>harshith k</p>
+                    <p>+917349599,+919980029171</p>
+                    <p>#430, kammanahalli main road rs palya 
+                        bangalore -560033 india</p>
+
+                    <hr/>
+                    <p><a href="#1">https://LinkedIn.com</a></p>
+                    <p><a href="#1">https://GitHub.com</a></p>
+                    <p><a href="#1">https://Instagram.com</a></p>
+                   
+                </div>
+            </div>
+            <div class="col-md-8 py-4 "> 
+                <h1 class="text-center" style="font: weight 980px;">your name</h1>
+            
+            <!-- objextive card -->
+            <div class="card mt-4">
+                <div class="card-header background">
+                <h3>objective</h3>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem iusto error, ratione reprehenderit placeat delectus maiores vel commodi recusandae sunt, accusantium cupiditate quasi aperiam nemo aliquam minus, quod tempora?
+
+                </p>
+
+            </div>
+        </div>
+        <!-- work experience -->
+        <div class="cars mt-4">
+            <div class="card-header background">
+                <h3>work experience</h3>
+            </div>
+            <div class = "card-body">
+                
+                <ul>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+            </ul>
+            
+            </div>
+            
+
+        </div>
+        <div class="cars mt-4">
+            <div class="card-header background">
+                <h3>work experience</h3>
+            </div>
+            <div class = "card-body">
+                
+                <ul>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </li>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+                    <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </li>
+            </ul>
+            
+            </div>
+            
+
+        </div>
+     </div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Corrected the attribute name from scr to src -->
+    <script src="script.js"></script>
+</body>
+</html>

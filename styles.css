@@ -1,0 +1,63 @@
+/* #resume{
+    display:block;
+    
+} */
+#resume-template{
+    display:none;
+    /* background-color: rgb(196, 255, 213); */
+
+}
+.myimg{
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 200px;
+}
+.nav-link{
+    color: white;
+}
+.background{
+    background-color:#343a40;
+    color: white;
+   
+}
+.color{
+   
+    background-color: antiquewhite;
+}
+.col-md-4{
+    background-color: aquamarine;
+}
+.py-4{
+    background-color: white;
+}
+
+.main{
+    background-color:#59cdfe;
+}
+.body{
+    background-color:#59cdfe;
+}
+.title-image{
+    width: 700px; 
+    height: 700px; 
+}
+.content{
+    padding:3% 15%;
+    margin: 20% 3%;
+    
+
+}
+.text{
+    color: white;
+}
+/* @media print{
+    body *:not(#my-print):not(#my-print *){
+        visibility:visible;
+    }
+    #my-print{
+        position:absolute;
+        top:0;
+        left:0;
+    }
+
+} */
